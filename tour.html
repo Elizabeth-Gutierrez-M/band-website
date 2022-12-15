@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Los Aguilars !</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar has-background-black"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand has-text-black">
+        <a class="navbar-item" href="https://pepeaguilar.com/">
+          <img src="images/pepe-logo.png" />
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu has-background-black">
+        <div class="navbar-start">
+          <a class="navbar-item has-text-white" href="index.html"> Home </a>
+
+          <a class="navbar-item has-text-white" href="about.html"> About </a>
+
+          <a class="navbar-item has-text-white" href="music-videos.html">
+            Music Videos
+          </a>
+
+          <a class="navbar-item has-text-white" href="discography.html">
+            Discography</a
+          >
+
+          <a class="navbar-item has-text-warning" href="tour.html"> Tour </a>
+        </div>
+      </div>
+    </nav>
+    <div class="columns mt-5">
+      <div class="column ml-3">
+        <img src="images/aguilar-tour.jpeg" alt="tour-img" />
+      </div>
+      <div class="column">
+        <h1 class="is-size-2 has-text-justified pl-1 has-text-warning">
+          TOUR DATES
+        </h1>
+        <p class="pl-2 has-text-white">
+          NOV 19 SAT <br />
+          <br />
+          Plaza de Toros Monumental @ 8:00pm <br />
+          AguilarLeonardo Aguilar Zacatecas, Mexico
+          <br />
+          <br />
+          <br />
+          JAN 13 FRI <br />
+          <br />
+          Pechanga Resort Casino @ 8:00pm <br />Temecula, CA, United States
+          <br />
+          <br />
+          <br />
+          JAN 15 SUN <br />
+          <br />
+          Acrisure Arena at Greater Palm Springs @ 7:00pm <br />
+          Palm Desert, CA, United States
+          <br />
+          <br />
+          <br />
+        </p>
+        <div class="has-background-black pl-2">
+          <p>
+            <a href="https://pepeaguilar.com/tour">GET TICKETS HERE !</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active");
+            $target.classList.toggle("is-active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
